@@ -1,0 +1,29 @@
+.keyboard__container {
+  display: grid;
+  grid-template-columns: minmax(auto, 380px) 1fr;
+  padding: 0 1rem;
+}
+
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.btn {
+  padding: 1rem;
+  border:none;
+}
+
+.btn--keyboard {
+  background: var(--yellow-color);
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 5px;
+  cursor:pointer;
+  transition: all ease-in-out .2s;
+}
+
+.btn--keyboard:hover {
+  box-shadow: 0 10px 20px #ffdf5d;
+}

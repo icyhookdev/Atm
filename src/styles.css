@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --yellow-color: #ffd739;
+  --lightPurple: #c299fc;
+  --blue-color: #6807f9;
+}
+
+@font-face {
+  font-family: 'Mont';
+  src: url(./assets/fonts/Montserrat-Regular.ttf) format('truetype');
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #333;
+  font-family: 'Mont', sans-serif;
+}
+
+.container__areas {
+  display: grid;
+  grid-template-columns: minmax(auto, 470px) 1fr;
+  grid-template-rows: 500px 400px;
+  grid-template-areas: 'left right'
+                        'left rightB';
+}
+
+.left__area {
+  background: linear-gradient(to bottom, #9052f9 0%, #6807f9 100%);
+  grid-area: left;
+  padding: 1rem;
+}
+
+.right__area {
+  background: #fff;
+  grid-area: right;
+  padding: 1rem;
+}
+
+.rightB__area {
+  background: #fff;
+  grid-area: rightB;
+  padding: 1rem;
+}
