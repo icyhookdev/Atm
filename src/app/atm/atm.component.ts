@@ -11,11 +11,12 @@ import Typed from 'typed.js';
 })
 export class AtmComponent implements OnInit {
   showScreen = false;
+  passwordInput = '';
   constructor() { }
 
   ngOnInit() {
     const typed = new Typed('.element', {
-      strings: ['Mas Que Un Banco.', 'Agentes Efectivos en el Area.', 'Inter Bank Donde Todo Es Posible.'],
+      strings: ['Visa.', 'Master Card.', 'Express.', 'All In One Place.'],
       smartBackspace: true, // Default value
       backDelay: 2000,
       typeSpeed: 70,
@@ -25,4 +26,15 @@ export class AtmComponent implements OnInit {
     });
   }
 
+  onShowLogin(data: boolean) {
+    this.showScreen = data;
+  }
+
+  fillPasswordInput(num: number) {
+    this.passwordInput += num;
+  }
+
+  delNumber(num: number) {
+    this.passwordInput = this.passwordInput.split('').slice(0, -num).join('');
+  }
 }

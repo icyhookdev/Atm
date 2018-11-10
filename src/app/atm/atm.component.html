@@ -1,12 +1,16 @@
 <main class="container__areas">
   <div class="right__area">
-    <h2>Bienvenidos a Inter Bank!</h2>
+    <h2>Welcome to InterBank!</h2>
   </div>
-  <app-screen *ngIf="showScreen"class="right__area"></app-screen>
-  <app-keyboard class="rightB__area"></app-keyboard>
+  <app-screen [fillInputPw]="passwordInput" *ngIf="showScreen"class="right__area"></app-screen>
+  <app-keyboard
+    (showLogin)="onShowLogin($event)"
+    (presNumber)="fillPasswordInput($event)"
+    (delNumber)="delNumber($event)"
+    class="rightB__area"></app-keyboard>
   <div class="left__area">
     <h1 class="super__text">
-      Somos <span class="element"></span>
+      We Are <span class="element"></span>
     </h1>
     <div class="logo">
 

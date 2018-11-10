@@ -5,11 +5,15 @@
   margin-bottom: .8rem;
   color: var(--blue-color);
   margin-top: 3rem;
+  animation-name: show-login;
+  animation-duration: 1s;
 }
 
 .login {
   width: 60%;
   margin: 1rem auto;
+  animation-name: show-login;
+  animation-duration: 1s;
 }
 
 .login > .login--label {
@@ -30,6 +34,10 @@
 
 .login > .login--input:focus {
   outline:none;
+}
+
+.login--input:disabled {
+  background: #fff;
 }
 
 .login > .login--btn {
@@ -55,4 +63,13 @@
 
 .login > .login--btn:focus {
   outline: none;
+}
+
+@keyframes show-login {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
