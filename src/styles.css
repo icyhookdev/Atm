@@ -23,7 +23,7 @@ body {
 
 .container__areas {
   display: grid;
-  grid-template-columns: minmax(auto, 470px) 1fr;
+  grid-template-columns: minmax(auto, 400px) 1fr;
   grid-template-rows: 500px 400px;
   grid-template-areas: 'left right'
                         'left rightB';
@@ -33,6 +33,9 @@ body {
   background: linear-gradient(to bottom, #9052f9 0%, #6807f9 100%);
   grid-area: left;
   padding: 1rem;
+  display:grid;
+  grid-template-rows: 1fr 285px;
+  grid-template-areas: 'top' 'bottom';
 }
 
 .right__area {

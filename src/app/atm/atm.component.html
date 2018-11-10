@@ -1,7 +1,15 @@
 <main class="container__areas">
-  <app-screen class="right__area"></app-screen>
+  <div class="right__area">
+    <h2>Bienvenidos a Inter Bank!</h2>
+  </div>
+  <app-screen *ngIf="showScreen"class="right__area"></app-screen>
   <app-keyboard class="rightB__area"></app-keyboard>
   <div class="left__area">
-    <h2>&ATM</h2>
+    <h1 class="super__text">
+      Somos <span class="element"></span>
+    </h1>
+    <div class="logo">
+
+    </div>
   </div>
 </main>

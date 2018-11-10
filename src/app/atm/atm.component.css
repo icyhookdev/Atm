@@ -1,0 +1,25 @@
+h2 {
+  font-size: 3rem;
+  text-align:center;
+  color: var(--blue-color);
+  vertical-align: middle;
+}
+
+.super__text {
+  font-size: 5rem;
+  color: #fff;
+  grid-area: top;
+}
+
+.logo {
+  grid-area:bottom;
+  position: absolute;;
+  bottom:-550px;
+  background: url(../../assets/img/settings.svg), bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 200px;
+  width: 100%;
+  transform: rotate(36deg);
+}
+
