@@ -9,8 +9,6 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class ScreenComponent implements OnInit, OnChanges {
   @Input() fillInputPw: string;
-  @ViewChild('inputPw') inputPw: ElementRef;
-  @ViewChild('inputId') inputId: ElementRef;
 
   loginForm: FormGroup;
   logIn: boolean;
