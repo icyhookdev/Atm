@@ -1,9 +1,20 @@
 <h2 class="heading">Por favor ingrese sus credenciales.</h2>
 
 <div class="login">
-  <label for="" class="login--label">Ingrese su ID</label>
-  <input type="text" class="login--input">
-  <label for="" class="login--label">Ingrese su contrasena</label>
-  <input type="password" disabled class="login--input" #inputPw [(ngModel)]="fillInputPw">
-  <button class="login--btn"><span>Validar</span></button>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <label for="" class="login--label" #inputId>ID</label>
+    <input
+      type="text"
+      class="login--input"
+      formControlName="id"
+      >
+    <p
+      class="error--p"
+      *ngIf="!loginForm.get('id').valid && loginForm.get('id').touched"> This Field is required!</p>
+    <label for="" class="login--label">Password</label>
+    <input type="password" disabled class="login--input" #inputPw [(ngModel)]="fillInputPw" formControlName="password">
+    <button type="submit"  [disabled]="!loginForm.valid" class="login--btn">
+      <span>Validate</span>
+    </button>
+  </form>
 </div>

@@ -22,3 +22,8 @@ h2 {
   width: 100%;
 }
 
+@media (max-width: 830px) {
+  .super__text {
+    font-size: 3rem;
+  }
+}

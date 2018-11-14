@@ -16,13 +16,13 @@
   animation-duration: 1s;
 }
 
-.login > .login--label {
+.login > form > .login--label {
   display: block;
   font-size: 1.4rem;
   color: var(--lightPurple);
 }
 
-.login > .login--input {
+.login > form > .login--input {
   margin: 1rem 0;
   width: 100%;
   border:2px solid var(--blue-color);
@@ -32,7 +32,7 @@
   font-size: 1.3rem;
 }
 
-.login > .login--input:focus {
+.login > form > .login--input:focus {
   outline:none;
 }
 
@@ -40,7 +40,7 @@
   background: #fff;
 }
 
-.login > .login--btn {
+.login > form > .login--btn {
   margin-top: 1rem;
   padding: 1rem 2rem;
   font-size: 1.3rem;
@@ -55,14 +55,25 @@
   transform: scale(0.96);
 }
 
-.login > .login--btn:hover {
+.login > form > .login--btn:hover {
   filter: brightness(.9) contrast(1.2);
   transform: scale(1);
 }
 
+.login > form > .login--btn:disabled {
+  background: var(--lightPurple);
+  cursor: default;
+}
 
-.login > .login--btn:focus {
+.login > form > .login--btn:focus {
   outline: none;
+}
+
+.error--p {
+  color: rgba(255,12,24,.753);
+  position:relative;
+  top:-13px;
+  margin-left:13px;
 }
 
 @keyframes show-login {
@@ -73,3 +84,5 @@
     opacity: 1;
   }
 }
+
+

@@ -1,11 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AtmComponent } from './atm/atm.component';
 import { ScreenComponent } from './atm/screen/screen.component';
 import { KeyboardComponent } from './atm/keyboard/keyboard.component';
+import { AccountService } from './atm/shared/services/accounts.service';
 
 @NgModule({
   declarations: [
@@ -16,9 +17,10 @@ import { KeyboardComponent } from './atm/keyboard/keyboard.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AccountService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
