@@ -7,18 +7,22 @@ import { AtmComponent } from './atm/atm.component';
 import { ScreenComponent } from './atm/screen/screen.component';
 import { KeyboardComponent } from './atm/keyboard/keyboard.component';
 import { AccountService } from './atm/shared/services/accounts.service';
+import { LoginComponent } from './atm/login/login.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     AtmComponent,
     ScreenComponent,
-    KeyboardComponent
+    KeyboardComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   providers: [AccountService],
   bootstrap: [AppComponent]

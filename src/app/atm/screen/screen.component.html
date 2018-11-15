@@ -1,20 +1,2 @@
-<h2 class="heading">Please Insert your credentials.</h2>
-<div class="login">
-  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-    <label for="" class="login--label" #inputId>ID</label>
-    <input
-      type="text"
-      class="login--input"
-      formControlName="id"
-      >
-    <p
-      class="error--p"
-      *ngIf="!loginForm.get('id').valid && loginForm.get('id').touched"> This Field is required!</p>
-    <label for="" class="login--label">Password</label>
-    <input type="password" disabled class="login--input" #inputPw [(ngModel)]="fillInputPw" formControlName="password">
-    <div class="error--p" *ngIf="logIn">ID or Password Wrong please check your data!</div>
-    <button type="submit"  [disabled]="!loginForm.valid" class="login--btn">
-      <span>Validate</span>
-    </button>
-  </form>
-</div>
+<router-outlet></router-outlet>
+
