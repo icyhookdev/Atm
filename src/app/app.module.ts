@@ -10,6 +10,7 @@ import { AccountService } from './atm/shared/services/accounts.service';
 import { LoginComponent } from './atm/login/login.component';
 import { AppRoutingModule } from './app-routing.module';
 import { KeyboardService } from './atm/shared/services/keyboard.service';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { KeyboardService } from './atm/shared/services/keyboard.service';
     AtmComponent,
     ScreenComponent,
     KeyboardComponent,
-    LoginComponent
+    LoginComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

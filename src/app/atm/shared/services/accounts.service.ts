@@ -11,8 +11,8 @@ export class AccountService {
   }
 
   validateAccount(id: string, pass: string) {
-    if (this.accounts.findIndex((x) => x.password === pass && x.id === id)) {
-     return true;
+    if (this.accounts.findIndex((x) => x.password === pass && x.id === id) !== -1) {
+      return true;
     } else {
       return false;
     }

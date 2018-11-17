@@ -2,6 +2,7 @@ import { EventEmitter } from '@angular/core';
 
 
 export class KeyboardService {
+  showScreenC = false;
   allowId = false;
   allowPassword = false;
 

@@ -1,6 +1,5 @@
-import { Component, OnInit, Input, OnChanges, ViewChild, ElementRef } from '@angular/core';
-import { AccountService } from '../shared/services/accounts.service';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Component, OnInit, Input, OnChanges} from '@angular/core';
+import { KeyboardService } from '../shared/services/keyboard.service';
 
 @Component({
   selector: 'app-screen',
@@ -8,25 +7,16 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./screen.component.css']
 })
 export class ScreenComponent implements OnInit, OnChanges {
-  @Input() fillInputPw: string;
+  screenCase = false;
 
-  loginForm: FormGroup;
-  logIn: boolean;
-
-  constructor(private accountService: AccountService) { }
+  constructor(private keyboardService: KeyboardService) { }
 
   ngOnInit() {
-    this.loginForm = new FormGroup({
-      'id': new FormControl(null, Validators.required),
-      'password': new FormControl(null, [Validators.required, Validators.minLength(4), Validators.maxLength(4)])
-    });
+    this.screenCase = this.keyboardService.showScreenC;
   }
 
   ngOnChanges() {
 
   }
 
-  onSubmit() {
-    this.logIn = this.accountService.validateAccount(this.loginForm.value.id, this.loginForm.value.password);
-  }
 }

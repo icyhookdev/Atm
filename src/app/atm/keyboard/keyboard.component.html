@@ -13,18 +13,14 @@
     <button class="btn btn--keyboard" (click)="onPressNumber('0')">0</button>
     <button class="btn btn--keyboard" (click)="onPressNumber('d')">D</button>
   </div>
-  <div class="card" routerLink="/login">
-    <div
-      class="card--insert">
-      <div
-        class="cc visa"
-        (click)="onInsertCard()">
-        <div class="cc-img-main"></div>
-        <div class="cc-text">Insert Card</div>
-        <div class="cc-icon"></div>
-        <div class="cc-num">**** **** **** 2562</div>
-        <div class="cc-date">Valid Thru: 12/18</div>
-      </div>
+  <div *ngIf="!showInOrRemCard" class="card" routerLink="/login" (click)="onInsertCard()">
+    <div class="card--content">
+      <h2 class="card--text">Insert Card <span class="text-arrow">&larr;</span></h2>
+    </div>
+  </div>
+  <div *ngIf="showInOrRemCard" class="card" routerLink="" (click)="onRemoveCard()">
+    <div class="card--content">
+      <h2 class="card--text"><span style="margin-right:20px;" class="text-arrow">&rarr;</span>Remove Card </h2>
     </div>
   </div>
 </div>

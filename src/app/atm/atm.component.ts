@@ -31,7 +31,4 @@ export class AtmComponent implements OnInit {
     this.showScreen = data;
   }
 
-  delNumber(num: number) {
-    this.passwordInput = this.passwordInput.split('').slice(0, -num).join('');
-  }
 }

@@ -5,6 +5,13 @@ h2 {
   vertical-align: middle;
 }
 
+h3 {
+  font-size: 2rem;
+  text-align:center;
+  font-weight: 100;
+  margin-top: 6rem;
+}
+
 .super__text {
   font-size: 5rem;
   color: #fff;
@@ -21,6 +28,8 @@ h2 {
   height: 200px;
   width: 100%;
 }
+
+
 
 @media (max-width: 830px) {
   .super__text {

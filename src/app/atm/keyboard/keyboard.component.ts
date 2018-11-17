@@ -11,8 +11,7 @@ export class KeyboardComponent implements OnInit {
   @Output() showLogin = new EventEmitter<boolean>();
   @Output() delNumber = new EventEmitter<number>();
 
-
-  allowInputPassword = false;
+  showInOrRemCard = false;
   constructor(private keyboardService: KeyboardService) { }
 
   ngOnInit() {
@@ -20,7 +19,12 @@ export class KeyboardComponent implements OnInit {
 
   onInsertCard() {
     this.showLogin.emit(true);
-    this.allowInputPassword = true;
+    this.showInOrRemCard = !this.showInOrRemCard;
+  }
+
+  onRemoveCard() {
+    this.showInOrRemCard = !this.showInOrRemCard;
+    this.keyboardService.showScreenC = true;
   }
 
   onPressNumber(num: string) {
@@ -29,15 +33,9 @@ export class KeyboardComponent implements OnInit {
     } else if (this.keyboardService.allowPassword) {
       this.keyboardService.password.emit(num);
     }
-
-    console.log(this.keyboardService.id, this.keyboardService.password);
   }
 
   onSelect(type: string) {
     this.keyboardService.onSelect(type);
-  }
-
-  onDelNumber() {
-    this.delNumber.emit(1);
   }
 }

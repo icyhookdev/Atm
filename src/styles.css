@@ -24,13 +24,13 @@ body {
 .container__areas {
   display: grid;
   grid-template-columns: minmax(auto, 400px) 1fr;
-  grid-template-rows: 500px 400px;
+  grid-template-rows: 450px 400px;
   grid-template-areas: 'left right'
                         'left rightB';
 }
 
 .left__area {
-  background: linear-gradient(to bottom, #9052f9 0%, #6807f9 100%);
+  background: linear-gradient(to bottom, hsl(264, 95%, 54%), hsl(276, 98%, 52%));
   grid-area: left;
   padding: 1rem;
   display:grid;

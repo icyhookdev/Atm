@@ -65,7 +65,7 @@ export class LoginComponent implements OnInit, OnChanges, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.keyboardService.id.unsubscribe();
-    this.keyboardService.password.unsubscribe();
+    // this.keyboardService.id.unsubscribe();
+    // this.keyboardService.password.unsubscribe();
   }
 }

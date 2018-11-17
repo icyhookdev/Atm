@@ -1,4 +1,5 @@
 .keyboard__container {
+  margin-top: 3rem;
   display: grid;
   grid-template-columns: minmax(auto, 300px) 1fr;
   padding: 0 1rem;
@@ -12,120 +13,55 @@
 }
 
 .btn {
-  padding: 1rem;
+  padding: .5rem;
   border:none;
 }
 
 .btn--keyboard {
-  background: var(--yellow-color);
-  color: #fff;
-  padding: 1.5rem;
+  color: #333;
+  background: #fff;
+  padding: 1.2rem;
+  height: 70px;
   border-radius: 50%;
+  border: 3px solid hsl(264, 95%, 54%);
   font-size: 1.5rem;
   cursor:pointer;
   transition: all ease-in-out .2s;
 }
 
 .btn--keyboard:hover {
-  box-shadow: 0 10px 20px #ffdf5d;
+  background: linear-gradient(to bottom, hsl(264, 95%, 54%), hsl(276, 98%, 52%));
+  color: #fff;
 }
 
 .card {
   display: grid;
   grid-template-columns: 1fr;
-}
-
-.cc {
+  height:200px;
+  background: linear-gradient(35deg, hsl(264, 95%, 54%) 0%, hsl(276, 98%, 52%) 100%);
+  border-radius: .45rem;
   cursor: pointer;
-  background-color:#e1e1e1;
-  display:grid;
-  grid-template-columns: 60% auto;
-  grid-template-rows: repeat(3, 50px);
-  grid-template-areas: 'img text'
-                       'number icon'
-                       'date icon';
-  padding: 20px;
-  border-radius: 5px;
-  margin-bottom: 30px;
-  border: 1px solid #e1e1e1;
-  transition: .2s ease-in-out;
-  position: relative;
+  align-items: center;
+  text-align:center;
+  transition: all .2s ease-in-out;
 }
 
-.cc:hover {
-  transform: scale(1.03);
-  border: 1px solid gray;
+.card:hover {
+
 }
 
-.cc-active:hover {
-  transform: scale(1);
-  border: 4px solid rgb(132, 148, 202);
-}
-
-.cc-active {
-  border: 4px solid rgb(132, 148, 202);
-}
-
-.cc-img{
-  width: 60px;
-  height: 40px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 4px;
-  margin-bottom: 15px;
-  grid-area: img;
-}
-
-.cc-img-main {
-  width: 60px;
-  height: 40px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 4px;
-  margin-bottom: 15px
-}
-
-.cc-num {
-  margin-top: 1rem;
-  font-size: 15px;
-  color: #333;
-  width:100%;
-  grid-area: number;
-}
-
-.cc-date {
-  color: #333;
-  width: 100%;
-  margin-right:0;
-  grid-area: date;
-}
-
-.cc-text {
+.card--text {
+  font-size: 2.5rem;
   font-weight: bold;
-  text-transform: uppercase;
-  position: relative;
-  left: -30px;
+  color: #fff;
 }
 
-.cc-icon {
-  background: url('../../../assets/img/eject.svg');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  display:inline-block;
-  position: absolute;
-  width: 65px;
-  height: 100px;
-  grid-area: icon;
-  animation-name: icon-bounce;
-  animation-duration: 1s;
+.text-arrow {
+  font-size: 3rem;
+  animation-name: textChange;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
-}
-
-.visa .cc-img,
-.visa .cc-img-main {
-  background-image: url("http://i.imgur.com/xYX6Tsy.png")
+  position: relative;
 }
 
 
@@ -139,6 +75,18 @@
 
   100% {
     top: 0;
+  }
+}
+
+@keyframes textChange {
+  0% {
+    right: -20px
+  }
+  50% {
+    right:0;
+  }
+  100% {
+    right:-20px;
   }
 }
 
