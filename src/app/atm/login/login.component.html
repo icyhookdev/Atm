@@ -21,7 +21,7 @@
       [(ngModel)]="fillInputPw"
       formControlName="password"
       (click)="onSelect('password')">
-    <div class="error--p" *ngIf="logIn">ID or Password Wrong please check your data!</div>
+    <div class="error--p" *ngIf="logIn === false">ID or Password Wrong please check your credentials!</div>
     <button type="submit"  [disabled]="!loginForm.valid" class="login--btn">
       <span>Validate</span>
     </button>

@@ -1,7 +1,10 @@
-import { Component, OnInit, Input, ViewChild, ElementRef, OnChanges, OnDestroy } from '@angular/core';
-import { AccountService } from '../shared/services/accounts.service';
+import { Component, OnInit, OnChanges, OnDestroy } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+
+import { AccountService } from '../shared/services/accounts.service';
 import { KeyboardService } from '../shared/services/keyboard.service';
+
 
 @Component({
   selector: 'app-login',
@@ -15,7 +18,10 @@ export class LoginComponent implements OnInit, OnChanges, OnDestroy {
   loginForm: FormGroup;
   logIn: boolean;
 
-  constructor(private accountService: AccountService, private keyboardService: KeyboardService) {
+  constructor(private accountService: AccountService,
+              private keyboardService: KeyboardService,
+              private route: ActivatedRoute,
+              private router: Router) {
     this.keyboardService.password.subscribe(
       (num: string) => {
         if (num === 'd') {
@@ -41,6 +47,7 @@ export class LoginComponent implements OnInit, OnChanges, OnDestroy {
       'id': new FormControl(null, Validators.required),
       'password': new FormControl(null, [Validators.required, Validators.minLength(4), Validators.maxLength(4)])
     });
+    console.log(this.logIn);
   }
 
   ngOnChanges() {
@@ -48,14 +55,17 @@ export class LoginComponent implements OnInit, OnChanges, OnDestroy {
 
   onSubmit() {
     this.logIn = this.accountService.validateAccount(this.loginForm.value.id, this.loginForm.value.password);
+    if (this.logIn) {
+      this.router.navigate(['../menu'], {relativeTo: this.route});
+    }
   }
 
   onSelect(type: string) {
-    console.log(this.keyboardService.password);
     this.keyboardService.onSelect(type);
   }
 
   ngOnDestroy() {
-
+    this.keyboardService.id.unsubscribe();
+    this.keyboardService.password.unsubscribe();
   }
 }
