@@ -12,6 +12,7 @@ import Typed from 'typed.js';
 export class AtmComponent implements OnInit {
   showScreen = false;
   passwordInput = '';
+  idInput = '';
   constructor() { }
 
   ngOnInit() {
@@ -28,10 +29,6 @@ export class AtmComponent implements OnInit {
 
   onShowLogin(data: boolean) {
     this.showScreen = data;
-  }
-
-  fillPasswordInput(num: number) {
-    this.passwordInput += num;
   }
 
   delNumber(num: number) {

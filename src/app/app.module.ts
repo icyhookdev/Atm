@@ -9,6 +9,7 @@ import { KeyboardComponent } from './atm/keyboard/keyboard.component';
 import { AccountService } from './atm/shared/services/accounts.service';
 import { LoginComponent } from './atm/login/login.component';
 import { AppRoutingModule } from './app-routing.module';
+import { KeyboardService } from './atm/shared/services/keyboard.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { AppRoutingModule } from './app-routing.module';
     ReactiveFormsModule,
     AppRoutingModule
   ],
-  providers: [AccountService],
+  providers: [AccountService, KeyboardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

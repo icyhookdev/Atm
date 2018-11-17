@@ -1,4 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { KeyboardService } from '../shared/services/keyboard.service';
 
 
 @Component({
@@ -8,11 +9,11 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class KeyboardComponent implements OnInit {
   @Output() showLogin = new EventEmitter<boolean>();
-  @Output() presNumber = new EventEmitter<number>();
   @Output() delNumber = new EventEmitter<number>();
 
+
   allowInputPassword = false;
-  constructor() { }
+  constructor(private keyboardService: KeyboardService) { }
 
   ngOnInit() {
   }
@@ -22,10 +23,18 @@ export class KeyboardComponent implements OnInit {
     this.allowInputPassword = true;
   }
 
-  onPressNumber(num: number) {
-    if (this.allowInputPassword) {
-      this.presNumber.emit(num);
+  onPressNumber(num: string) {
+    if (this.keyboardService.allowId) {
+      this.keyboardService.id.emit(num);
+    } else if (this.keyboardService.allowPassword) {
+      this.keyboardService.password.emit(num);
     }
+
+    console.log(this.keyboardService.id, this.keyboardService.password);
+  }
+
+  onSelect(type: string) {
+    this.keyboardService.onSelect(type);
   }
 
   onDelNumber() {

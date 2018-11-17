@@ -5,7 +5,6 @@
   <app-screen [fillInputPw]="passwordInput" *ngIf="showScreen"class="right__area"></app-screen>
   <app-keyboard
     (showLogin)="onShowLogin($event)"
-    (presNumber)="fillPasswordInput($event)"
     (delNumber)="delNumber($event)"
     class="rightB__area"></app-keyboard>
   <div class="left__area">

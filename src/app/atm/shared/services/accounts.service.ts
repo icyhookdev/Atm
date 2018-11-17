@@ -6,7 +6,6 @@ export class AccountService {
     {id: '1234', name: 'Cristian', password: '1234'}
   ];
 
-
   constructor() {
 
   }
