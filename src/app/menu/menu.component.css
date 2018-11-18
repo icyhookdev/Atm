@@ -1,0 +1,68 @@
+.menu {
+  display: grid;
+  grid-template-columns: minmax(auto, 250px) 1fr;
+}
+
+.account__info {
+  padding: 1rem;
+  margin-top: 5rem;
+}
+
+.account--owner {
+ margin-bottom: 2rem;
+}
+
+.account--owner >.welcome {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  color:hsl(264, 95%, 54%);
+  font-weight: 100;
+  margin: 20px auto;
+}
+
+.account--owner > h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: hsl(264, 95%, 54%);
+}
+
+.account--balance > label{
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  color:hsl(264, 95%, 54%);
+  font-weight: 100;
+  margin: 20px auto;
+}
+
+.account--balance > h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: hsl(264, 95%, 54%);
+}
+
+.account__action {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 150px);
+  grid-gap: 20px;
+}
+
+.account__action > .acc {
+  border: 2px solid hsl(264, 95%, 54%);;
+  border-radius: 5px;
+  padding: 1rem;
+  display:grid;
+  align-items: center;
+  text-align:center;
+  cursor:pointer;
+  transition: all .3s ease-in-out;
+  color:hsl(264, 95%, 54%);
+}
+
+.account__action > .acc:hover {
+  font-size: 1.3rem;
+  background: linear-gradient(to bottom, hsl(264, 95%, 54%), hsl(276, 98%, 52%));
+  color: #fff;
+}
+
