@@ -1,0 +1,19 @@
+<div class="showCase">
+  <span class="text-arrow" [routerLink]="['/menu']">&larr;</span>
+
+  <form [formGroup]="depositForm" (ngSubmit)="onSubmit()">
+    <label for="">Amount</label>
+    <input
+      type="text"
+      readonly
+      formControlName="deposit"
+      (click)="onSelect('deposit')"
+      [(ngModel)]="fillDepositInput">
+    <button class="btn--action">Deposit</button>
+  </form>
+</div>
+
+
+
+
+
