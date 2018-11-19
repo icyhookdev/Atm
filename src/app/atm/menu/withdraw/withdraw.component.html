@@ -1,0 +1,15 @@
+<div class="showCase">
+  <span class="text-arrow" [routerLink]="['/menu']">&larr;</span>
+
+  <form [formGroup]="withdrawForm" (ngSubmit)="onSubmit()">
+    <label for="">Amount</label>
+    <input
+      type="text"
+      readonly
+      formControlName="withdraw"
+      (click)="onSelect('withdraw')"
+      [(ngModel)]="fillWithdrawInput">
+    <button class="btn--action">Withdraw</button>
+  </form>
+</div>
+

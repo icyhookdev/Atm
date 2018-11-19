@@ -1,0 +1,64 @@
+form {
+  width: 60%;
+  margin: 5rem auto;
+}
+
+form > label {
+  display: block;
+  font-size: 1.4rem;
+  color: var(--lightPurple);
+}
+ form > input {
+  margin: 1rem 0;
+   /* width: 100%; */
+  border:2px solid var(--blue-color);
+  border-radius: 100px;
+  padding: .5rem 1rem;
+  font-size: 1.3rem;
+}
+
+
+form > input:focus {
+  outline:none;
+}
+
+
+input:disabled {
+  background: #fff;
+}
+
+form > .btn--action {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  font-size: 1.3rem;
+  letter-spacing: 3px;
+  border-radius: 36px;
+  font-weight: 500;
+  background: var(--blue-color);
+  color: #fff;
+  cursor: pointer;
+  transition: all ease-in-out .4s;
+  border:none;
+  transform: scale(0.96);
+  display: inline-block;
+}
+
+form > .btn--action:hover {
+  filter: brightness(.9) contrast(1.2);
+  transform: scale(1);
+}
+
+
+.text-arrow {
+  font-size: 4rem;
+  color:hsl(264, 95%, 54%);
+  cursor:pointer;
+  margin-left: 2rem;
+  transition: all .3s ease-in-out;
+  text-decoration: none;
+}
+
+.text-arrow:hover {
+  margin-left: 1.3rem;
+}
+
