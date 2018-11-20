@@ -16,15 +16,15 @@ export class AtmComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    const typed = new Typed('.element', {
-      strings: ['Visa.', 'Master Card.', 'Express.', 'All In One Place.'],
-      smartBackspace: true, // Default value
-      backDelay: 2000,
-      typeSpeed: 70,
-      backSpeed: 70,
-      loop: true,
-      loopCount: Infinity,
-    });
+    // const typed = new Typed('.element', {
+    //   strings: ['Visa.', 'Master Card.', 'Express.', 'All In One Place.'],
+    //   smartBackspace: true, // Default value
+    //   backDelay: 2000,
+    //   typeSpeed: 70,
+    //   backSpeed: 70,
+    //   loop: true,
+    //   loopCount: Infinity,
+    // });
   }
 
   onShowLogin(data: boolean) {

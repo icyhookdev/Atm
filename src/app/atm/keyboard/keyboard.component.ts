@@ -32,6 +32,10 @@ export class KeyboardComponent implements OnInit {
       this.keyboardService.id.emit(num);
     } else if (this.keyboardService.allowPassword) {
       this.keyboardService.password.emit(num);
+    } else if (this.keyboardService.allowDeposit) {
+      this.keyboardService.deposit.emit(num);
+    } else if (this.keyboardService.allowWithdraw) {
+      this.keyboardService.withdraw.emit(num);
     }
   }
 

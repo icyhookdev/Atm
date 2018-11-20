@@ -15,6 +15,9 @@ export class LoginComponent implements OnInit, OnChanges, OnDestroy {
   fillInputPw = '';
   fillInputId = '';
 
+  checkIdInput: boolean;
+  checkPwInput: boolean;
+
   loginForm: FormGroup;
   logIn: boolean;
 
@@ -47,7 +50,6 @@ export class LoginComponent implements OnInit, OnChanges, OnDestroy {
       'id': new FormControl(null, Validators.required),
       'password': new FormControl(null, [Validators.required, Validators.minLength(4), Validators.maxLength(4)])
     });
-    console.log(this.logIn);
   }
 
   ngOnChanges() {
@@ -62,6 +64,8 @@ export class LoginComponent implements OnInit, OnChanges, OnDestroy {
 
   onSelect(type: string) {
     this.keyboardService.onSelect(type);
+    this.checkIdInput = this.keyboardService.allowId;
+    this.checkPwInput = this.keyboardService.allowPassword;
   }
 
   ngOnDestroy() {

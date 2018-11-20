@@ -10,7 +10,10 @@ import { AccountService } from './atm/shared/services/accounts.service';
 import { LoginComponent } from './atm/login/login.component';
 import { AppRoutingModule } from './app-routing.module';
 import { KeyboardService } from './atm/shared/services/keyboard.service';
-import { MenuComponent } from './menu/menu.component';
+import { MenuComponent } from './atm/menu/menu.component';
+import { DepositComponent } from './atm/menu/deposit/deposit.component';
+import { WithdrawComponent } from './atm/menu/withdraw/withdraw.component';
+import { TransactionsComponent } from './atm/menu/transactions/transactions.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { MenuComponent } from './menu/menu.component';
     ScreenComponent,
     KeyboardComponent,
     LoginComponent,
-    MenuComponent
+    MenuComponent,
+    DepositComponent,
+    WithdrawComponent,
+    TransactionsComponent
   ],
   imports: [
     BrowserModule,

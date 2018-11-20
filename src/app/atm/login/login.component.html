@@ -4,6 +4,7 @@
     <label for="" class="login--label">ID</label>
     <input
       type="text"
+      [ngStyle]="{border: checkIdInput === true? '2px solid #ffd739' : '2px solid var(--blue-color'}"
       readonly
       class="login--input"
       formControlName="id"
@@ -18,6 +19,7 @@
       type="password"
       readonly
       class="login--input"
+      [ngStyle]="{border: checkPwInput === true? '2px solid #ffd739' : '2px solid var(--blue-color'}"
       [(ngModel)]="fillInputPw"
       formControlName="password"
       (click)="onSelect('password')">

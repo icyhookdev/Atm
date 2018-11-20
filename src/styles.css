@@ -49,3 +49,21 @@ body {
   grid-area: rightB;
   padding: 1rem;
 }
+
+.showCase {
+  animation-name: show;
+  animation-duration: 2s;
+}
+
+.select {
+  border: 2px solid rgb(0, 202, 78);
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
